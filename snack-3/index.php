@@ -1,10 +1,4 @@
-<?php 
-/* 
-Snack 3
-Creare un array di array. Ogni array figlio avrà come chiave una data in questo formato: DD-MM-YYYY es 01-01-2007 
-e come valore un array di post associati a quella data. Stampare ogni data con i relativi post.
-Qui l’array di esempio: https://www.codepile.net/pile/R2K5d68z
-*/
+<?php
 
 $posts = [
 
@@ -45,10 +39,6 @@ $posts = [
         ]
     ],
 ];
-
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -60,6 +50,11 @@ $posts = [
     <title>Snack 3</title>
 </head>
 <body>
-    
+
+    <p><?php foreach ($posts as $post) {
+        echo $post['title']. $post['author']. $post['text'];
+    } ?></p>
+
+
 </body>
 </html>
