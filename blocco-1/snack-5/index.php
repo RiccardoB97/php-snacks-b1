@@ -1,11 +1,4 @@
-<?php 
 
-$sentence = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. A officiis doloribus quibusdam ullam tempora omnis doloremque nulla dolor qui vitae fuga iusto accusamus, aut quae. Aperiam aspernatur sint, maiores nobis nesciunt qui dignissimos quod assumenda. Eligendi asperiores quisquam distinctio perspiciatis?";
-$newSentences = explode(".",$sentence);
-var_dump($newSentences);
-
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +9,16 @@ var_dump($newSentences);
     <title>Snack 5</title>
 </head>
 <body>
-    
+<?php 
+    $sentence = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. A officiis doloribus quibusdam ullam tempora omnis doloremque nulla dolor qui vitae fuga iusto accusamus, aut quae. Aperiam aspernatur sint, maiores nobis nesciunt qui dignissimos quod assumenda. Eligendi asperiores quisquam distinctio perspiciatis?";
+    $newSentences = explode(".",$sentence);
+?>
+    <p><?php foreach($newSentences as $phrase){
+        echo $phrase. "<br>";
+    } ?></p>
+
+
+
     
 </body>
 </html>
