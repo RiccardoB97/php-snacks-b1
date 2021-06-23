@@ -38,6 +38,8 @@ $activeAds = [];
 foreach ($ads as $ad) {
     if($ad['is_active']){
         $activeAds[] = $ad;
+    } else{
+        $activeAds[] = ['title' => 'spazio disponibile'];
     }
 }
 $number = rand(0, count($activeAds) - 1);
@@ -53,8 +55,9 @@ $number = rand(0, count($activeAds) - 1);
     <title>Snack 1</title>
 </head>
 <body>
-    <a href="<?php echo $activeAds[$number]['link']?>">
-        <img src="<?php echo $activeAds[$number]['image_path']?>" alt="">
+<h1><?php echo $activeAds[$number]['title'];?></h1>
+    <a href="<?php echo $activeAds[$number]['link'];?>">
+        <img src="<?php echo $activeAds[$number]['image_path'];?>" alt="">
     </a>
 </body>
 </html>
