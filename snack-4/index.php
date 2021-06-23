@@ -1,12 +1,9 @@
 <?php 
 $randomNumbers = [];
-for ($i=0; $i < 15; $i++) { 
-    $number = rand(1, 100);
-    if (!in_array($randomNumbers)){
+while (count($randomNumbers) < 15){
+    $number = rand(0, 100);
+    if(!in_array($number, $randomNumbers)){
         $randomNumbers[] = $number;
-    }
-    else {
-        $i--;
     }
 }
 var_dump($randomNumbers)
