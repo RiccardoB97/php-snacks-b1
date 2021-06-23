@@ -19,13 +19,16 @@ Avremo un file PHP con il nostro “database” e un file con tutta la logica.
 </head>
 <body>
 <?php 
-foreach ($hotels as $hotel){
+  if(!$_GET){
+    foreach ($hotels as $hotel){
       foreach($hotel as $key => $value){ ?>
         <h2><?php echo $key . ': ' . $value; ?></h2>
       <?php } ?>
         <hr>
     <?php }
-?>
+  }
+  ?>
+
 
 
 

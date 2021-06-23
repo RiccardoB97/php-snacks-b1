@@ -22,6 +22,12 @@ $age = $_GET['age'];
     <title>Snack 2</title>
 </head>
 <body>
+<form action="">
+    <input type="text" name="name" id="name" placeholder="Insert your name">
+    <input type="text" name="mail" id="mail" placeholder="Insert your mail">
+    <input type="text" name="age" id="age" placeholder="Insert your age in numbers">
+    <button type="submit"></button>
+</form>
     <?php 
         if (strlen($name) > 3 && strpos($mail, '.') && strpos($mail, '@') && !is_nan($age)):
             echo 'Accesso riuscito';
