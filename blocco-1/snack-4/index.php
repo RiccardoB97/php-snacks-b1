@@ -1,15 +1,4 @@
-<?php 
-$randomNumbers = [];
-while (count($randomNumbers) < 15){
-    $number = rand(0, 100);
-    if(!in_array($number, $randomNumbers)){
-        $randomNumbers[] = $number;
-    }
-}
-var_dump($randomNumbers)
 
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,6 +8,16 @@ var_dump($randomNumbers)
     <title>Snack 4</title>
 </head>
 <body>
-    
+<?php 
+    $randomNumbers = [];
+    while (count($randomNumbers) < 15){
+        $number = rand(0, 100);
+        if(!in_array($number, $randomNumbers)){
+            $randomNumbers[] = $number;
+        }
+    }
+    ?> <p><?php foreach($randomNumbers as $random){
+        echo $random. ' ';
+    }?></p> 
 </body>
 </html>
